@@ -16,7 +16,6 @@
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weigth-main);
 }
-
 .header {
   display: flex;
   flex-direction: column;
@@ -30,7 +29,6 @@
 .text-header {
   font-family: var(--font-PressStart2P);
 }
-
 .content-setting-container {
   margin-bottom: 50px;
   background-color: white;
@@ -57,7 +55,6 @@
   font-family: var(--font-inter);
   font-size: var(--font-weight-main);
 }
-
 .btn {
   display: flex;
   align-self: end;
@@ -80,7 +77,6 @@
   border: 2px solid #000;
   transition: border 0.3s ease;
 }
-
 .icon-core,
 .icon-main-body {
   fill: transparent;
@@ -90,23 +86,23 @@
   transition: fill 0.1s linear;
 }
 .icon-core {
+  fill: transparent;
   transition: fill 0.3s linear 0.03s;
 }
 .icon-main-body {
+  fill: transparent;
   transition: fill 0.3s linear;
 }
-.icon-sparks {
+.like-icon .icon-sparks {
   opacity: 0;
-  fill: var(--sparks-like-color);
-  animation: scale-sparks 0.3s ease-in;
 }
 .like-icon:hover .icon-main-body {
   fill: var(--counte-like-color);
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 .like-icon:hover .icon-core {
   fill: var(--counte-like-color);
-  transition: fill 0.3s linear 0s;
+  transition: fill 0.3s linear;
 }
 .like-icon:active .icon-main-body {
   fill: var(--main-body-like-color);
@@ -114,14 +110,30 @@
 }
 .like-icon:active .icon-core {
   fill: var(--main-body-like-color);
-  transition: fill 0.3s linear 0s;
+  transition: fill 0.3s linear;
 } 
-
 .like-icon {
-  animation: scale-heart 0.3s ease-in;
+  transform-origin: center;
+  cursor: pointer;
 }
-
-
+.like-icon.is-liked .icon-contour {
+  fill: var(--change-color-icon);
+  transition: fill 0.3s 0.06s linear;
+}
+.like-icon.is-liked .icon-core {
+  fill: var(--change-color-icon);
+  transition: fill 0.3s linear;
+}
+.like-icon.is-liked .icon-main-body {
+  fill: var(--change-color-icon);
+  transition: fill 0.3s 0.05s linear;
+}
+.like-icon.is-liked {
+  animation: scale-heart 0.3s 0.1s ease-in;
+}
+.like-icon.is-liked .icon-sparks {
+  animation: scale-sparks 0.3s 0.3s ease-in;
+}
 /*сердце рядом с кнопкой-конец*/
 
 
@@ -221,8 +233,8 @@
   filter: blur(1.2rem);
 }
 .hue-rotate {
-  filter: hue-rotate(90deg);
-}/*здесь множественные стили надо*/
+  filter: hue-rotate(90deg) blur(0.1rem) brightness(70%) contrast(50%) saturate(170%);
+}
 /*все фильтры изображениям - конец*/
 
 
@@ -231,15 +243,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 .btn_bottom {
   min-width: 335px;
   height: 55px;
 }
 .save_btn {
+  display: flex;
+  align-items: center;
   height: 55px;
-  margin-bottom: 50px;
   border: 2px solid #000;
+
 }
 .button__text_save {
   min-width: 266px;
@@ -271,7 +286,6 @@
   font-weight: var(--font-weight-main);
   text-transform: uppercase;
 }
-
 form {
   display: flex;
   justify-content: center;
@@ -310,5 +324,4 @@ button:hover {
   }
 
 }
-
 /*полный подвал с кнопкой - конец*/
