@@ -1,10 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --font-inter: 'Inter', sans-serif;
-  --font-PressStart2P: 'PressStart2P', sans-serif;
-  --font-weight-main: 410;
-  --font-weight-variable: 710;
+  --main-font: 'Inter', sans-serif;
+  --accent-font: 'PressStart2P', sans-serif;
+  --font-size-button: 14px;
+  --font-weight-main: 18px;
+  --font-weight-label: 14px;
+  --font-weight-variable: 18px;
   --gradient-horizontal: repeating-linear-gradient(
     to right,
     #d3d3d3 0, #d3d3d3 2px,
