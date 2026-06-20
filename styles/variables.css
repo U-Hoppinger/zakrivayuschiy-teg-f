@@ -4,9 +4,9 @@
   --main-font: 'Inter', sans-serif;
   --accent-font: 'PressStart2P', sans-serif;
   --font-size-button: 14px;
-  --font-weight-main: 18px;
-  --font-weight-label: 14px;
-  --font-weight-variable: 18px;
+  --font-size-variable: 18px;
+  --font-weight-main: 410;
+  --font-weight-title: 400;
   --gradient-horizontal: repeating-linear-gradient(
     to right,
     #d3d3d3 0, #d3d3d3 2px,
@@ -28,7 +28,6 @@
   --clamp-rubber-height: clamp(327px, 80%, 960px);
   --bg-color-container: white;
   --stroke-color: #fff;
-
   --counte-like-color: black;
   --core-like-color: white;
   --sparks-like-color: red;
