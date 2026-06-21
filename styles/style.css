@@ -11,11 +11,9 @@
 */
 
 .page {
-  width: clamp(375px, 80%, 700px);
   font-family: var(--main-font);
-  min-inline-size: 435px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--font-weight-main);
+  font-variation-settings: 'wght' var(--main-card-font-weight, 400);
 }
 .header {
   display: flex;
@@ -36,7 +34,7 @@
 }
 .header_title {
   font-weight: var(--font-weight-title);
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 .text-description {
   margin-top: 20px;
@@ -48,11 +46,11 @@
   background-color: white;
 }
 .header-of-block-main {
-  height: 30px;
+  min-height: 30px;
   padding: 8px 10px;
   font-family: var(--main-font);
   font-size: var(--font-size-variable);
-  font-variation-settings: 'wght' var(--font-weight-main);
+  font-variation-settings: 'wght' var(--card-title-font-weight, 700);
 }
 
 
@@ -99,8 +97,6 @@
   outline: none;
 }
 .card__icon-button:focus-visible {
-  display: inline-flex;
-  box-sizing: border-box;
   border: 2px solid #000;
   
 }
@@ -177,7 +173,7 @@
   overflow: hidden;
   background-color: white;
   transition: box-shadow 0.3s ease;
-  /*mix-blend-mode: difference; - какая-то фигня которая все ломает*/
+
 }
 .button:focus {
   box-shadow: 2px 2px 0px 0px #000;
@@ -209,6 +205,7 @@
   min-width: 130px;
   min-height: 38px;
   color: white;
+  font-family: var(--accent-font);
   mix-blend-mode: difference;
 }
 
@@ -272,15 +269,12 @@
   align-items: center;
   margin-bottom: 50px;
 }
-.btn_bottom {
-  min-width: 335px;
-  height: 55px;
-}
+
 .save_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 335px;
+  width: 335px;
   height: 55px;
   border: 2px solid #000;
 }
@@ -289,7 +283,10 @@
 }
 .icon-save_bottom {
   margin-right: 8px;
+  fill: currentColor;
 }
+
+
 .popup__container {
   display: flex;
   flex-direction: row;
@@ -348,24 +345,55 @@ button:hover {
   min-width: 353px;
   min-height: 191px;
 }
+.set_dialog-text {
+  width: 234px;
+  text-transform: uppercase;
+}
 
-
-@media (width <= 375px) {
+@media (max-width: 375px) {
   .page {
   font-family: var(--main-font);
   max-inline-size: 100%;
   font-variation-settings: "wght" var(--font-weight-main);
   }
+  .header {
+    min-height: 327px;
+  }
   .header_title {
     font-size: 49px;
   }
+  .text-description {
+  margin-top: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
   
   .header {
     box-sizing: border-box;
-    max-width: 375px; 
+    width: 375px; 
     margin-bottom: 100px;
   }
   .content-setting-container {
     min-width: 375px;
   }
+  .save_btn {
+    display: flex;
+    flex-direction: column;
+    max-width: 306px;
+    height: 84px;
+  }
+  .icon-save_bottom {
+    width: 28px; 
+    height: 28px;
+}
+.save_btn {
+  width: 305px;
+}
+.icon-save_bottom {
+  margin-top: 17px;
+}
+
+#dialog-id {
+  min-width: 341px;
+}
 }

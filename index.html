@@ -361,7 +361,7 @@
           <svg class="icon-save_bottom" width="21" height="21" viewBox="0 0 21 21" class="icon-floppy">
             <use href="./svg/floppy.svg#main-content"></use>
           </svg>
-          <span class="button__text_save">Сохранить на память</span>
+          <span class="button__text">Сохранить на память</span>
         </button>
       </div>
       <dialog id="dialog-id">
@@ -369,11 +369,12 @@
           <svg class="icon-save_bottom" width="39" height="39" viewBox="0 0 21 21" class="icon-floppy">
             <use href="./svg/floppy.svg#main-content"></use>
           </svg>
-          <p class="popup__text">Вставьте дискету, чтобы продолжить</p>
+          <p class="button__text set_dialog-text">Вставьте дискету, чтобы продолжить</p>
         </div>
         <form method="dialog">
           <button class="popup__controller button" type="submit"
-            onclick="document.getElementById('dialog-id').close();">Ок</button>
+            onclick="document.getElementById('dialog-id').close();">
+            <span>OK</span></button>
         </form>
       </dialog>
 

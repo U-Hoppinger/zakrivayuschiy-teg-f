@@ -12,6 +12,8 @@
     #d3d3d3 0, #d3d3d3 2px,
     transparent 2px, transparent 4px
   );
+  --card-title-font-weight: 700;
+  --main-card-font-weight: 400;
   --gradient-vertical: repeating-linear-gradient(
     to bottom,
     #d3d3d3 0, #d3d3d3 2px,
