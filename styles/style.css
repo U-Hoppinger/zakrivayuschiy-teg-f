@@ -225,7 +225,7 @@
   height: 14px; 
   opacity: 0.5;
   font-family: var(--accent-font);
-  font-size: var(--font-size-lable); 
+  font-size: var(--font-size-label); 
   mix-blend-mode: hard-light;
 }
 @supports (-webkit-text-stroke: 1px var(--stroke-color)) {
