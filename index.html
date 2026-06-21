@@ -353,12 +353,11 @@
         </button>
       </div>
     </div>
-
     <div class="save_button_oped_dialog">
       <div class="btn_bottom">
         <button type="button" class="save_btn button" onclick="document.getElementById('dialog-id').showModal();"
           aria-controls="dialog-id">
-          <svg class="icon-save_bottom" width="21" height="21" viewBox="0 0 21 21" class="icon-floppy">
+          <svg class="icon-save_bottom" width="21" height="21" viewBox="0 0 21 21">
             <use href="./svg/floppy.svg#main-content"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
@@ -366,7 +365,7 @@
       </div>
       <dialog id="dialog-id">
         <div class="popup__container">
-          <svg class="icon-save_bottom" width="39" height="39" viewBox="0 0 21 21" class="icon-floppy">
+          <svg class="icon-save_bottom" width="39" height="39" viewBox="0 0 21 21">
             <use href="./svg/floppy.svg#main-content"></use>
           </svg>
           <p class="button__text set_dialog-text">Вставьте дискету, чтобы продолжить</p>
@@ -374,11 +373,9 @@
         <form method="dialog">
           <button class="popup__controller button" type="submit"
             onclick="document.getElementById('dialog-id').close();">
-            <span>OK</span></button>
+            <span class="button__text">OK</span></button>
         </form>
       </dialog>
-
-
     </div>
   </main>
   <script src="./scripts/like.js"></script>
