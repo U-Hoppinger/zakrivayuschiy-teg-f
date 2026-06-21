@@ -13,7 +13,7 @@
 .page {
   font-family: var(--main-font);
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--main-card-font-weight, 400);
+  font-variation-settings: 'wght' var(--main-card-font-weight, 410);
 }
 .header {
   display: flex;
@@ -50,7 +50,7 @@
   padding: 8px 10px;
   font-family: var(--main-font);
   font-size: var(--font-size-variable);
-  font-variation-settings: 'wght' var(--card-title-font-weight, 700);
+  font-variation-settings: 'wght' var(--card-title-font-weight, 715);
 }
 
 
@@ -192,7 +192,6 @@
   
 }
 .button:hover::before {
-  color: white; 
   transform: translateX(0);
 }
 .button__text {
@@ -203,7 +202,6 @@
   justify-content: center;
   align-items: center;
   min-width: 130px;
-  min-height: 38px;
   color: white;
   font-family: var(--accent-font);
   mix-blend-mode: difference;
@@ -227,7 +225,7 @@
   height: 14px; 
   opacity: 0.5;
   font-family: var(--accent-font);
-  font-size: var(--font-size-variable); 
+  font-size: var(--font-size-lable); 
   mix-blend-mode: hard-light;
 }
 @supports (-webkit-text-stroke: 1px var(--stroke-color)) {
@@ -298,16 +296,6 @@
   margin-bottom: 30px;
   margin-left: 15px;
 }
-.popup__controller {
-  display: flex;
-  justify-self: center;
-  align-items: center;
-  min-width: 293px;
-  height: 38px;
-  font-family: var(--accent-font);
-  text-transform: uppercase;
-  background-color: white;
-}
 .popup__text {
   max-width: 234px;
   min-height: 63px;
@@ -333,6 +321,10 @@ button:hover {
 }
 /*полный подвал с кнопкой - конец*/
 
+.set_btn_width_dialog {
+  width: 293px;
+}
+
 
 .save_button_oped_dialog {
   display: flex;
@@ -351,7 +343,11 @@ button:hover {
 }
 .set_dialog-text {
   width: 234px;
+  line-height: 150%;
   text-transform: uppercase;
+}
+.set_margin {
+  margin-top: 12px;
 }
 
 @media (max-width: 375px) {
